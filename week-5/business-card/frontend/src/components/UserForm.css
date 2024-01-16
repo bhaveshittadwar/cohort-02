@@ -1,0 +1,43 @@
+.userForm {
+    display: flex;
+    gap: 0 16px;
+    justify-content: space-between;
+    padding: 12px;
+    background-color: lightgray;
+    flex-wrap: wrap;
+}
+
+.inputContainer {
+    display: flex;
+    gap: 10px;
+}
+
+.userForm input {
+    padding: 12px;
+    text-align: center;
+    border-radius: 24px;
+    border: 1px lightgray solid;
+}
+
+.userForm input::placeholder {
+    text-align: center;
+}
+
+.userForm label {
+    align-self: center;
+    font-size: large;
+    font-weight: bold;
+}
+
+.userForm button {
+    padding: 12px 40px;
+    border-radius: 20px;
+    border: 1px transparent solid;
+    font-size: large;
+    color: white;
+    background-color: #007bff;
+}
+
+.userForm button:hover {
+    cursor: pointer;
+}
