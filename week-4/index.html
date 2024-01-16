@@ -25,13 +25,14 @@
       // 1. added
       // 2. deleted
       // 3. updated
-      const added = [];
-      const deleted = [];
-      const updated = [];
+      const added = newTodos.filter(newTodo => !oldTodoState.some(oldTodo => oldTodo.id === newTodo.id));
+      const deleted = newTodos.filter(newTodo => !oldTodoState.includes(newTodo));
+      const updated = []; // TODO
       // calculate these 3 arrays
       // call addTodo, removeTodo, updateTodo functions on each of the
       // elements
-      oldTodoState = newTodos;
+      console.log('added: ', deleted)
+      oldTodoState = [...newTodos];
     }
 
     function addTodo() {
