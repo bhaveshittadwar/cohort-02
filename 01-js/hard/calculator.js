@@ -1,3 +1,5 @@
+
+const math = require('mathjs')
 /*
   Implement a class `Calculator` having below methods
     - initialise a result variable in the constructor and keep updating it after every arithmetic operation
@@ -16,6 +18,42 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
+  constructor() {
+    this.result = 0;
+  }
+
+  add(num) {
+    this.result += num;
+  }
+
+  subtract(num) {
+    this.result -= num;
+  }
+
+  multiply(num) {
+    this.result *= num;
+  }
+
+  divide(num) {
+    this.result /= num;
+  }
+
+  clear() {
+    this.result = 0;
+  }
+
+  getResult() {
+    return this.result;
+  }
+
+  calculate(str) {
+    const result = math.evaluate(str)
+
+    if (isNaN(result)) throw new Error();
+    
+    this.result = math.evaluate(str)
+  }
+}
 
 module.exports = Calculator;
